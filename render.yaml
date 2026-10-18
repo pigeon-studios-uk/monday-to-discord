@@ -1,0 +1,23 @@
+# Render blueprint: https://render.com/docs/blueprint-spec
+# In Render: New → Blueprint → choose your copy of this repository. You'll be asked for the secret values.
+services:
+  - type: web
+    name: monday-to-discord
+    runtime: node
+    plan: free
+    buildCommand: "true"
+    startCommand: node src/index.js
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: RELAY_SECRET
+        generateValue: true
+      - key: MONDAY_API_TOKEN
+        sync: false
+      - key: RULES_JSON
+        sync: false
+      - key: DISCORD_WEBHOOK_DEPLOYMENTS
+        sync: false
+      - key: DISCORD_WEBHOOK_TEAM
+        sync: false

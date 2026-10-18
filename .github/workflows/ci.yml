@@ -1,0 +1,60 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Tests (Node.js ${{ matrix.node }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [20, 22, 24]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Tests
+        run: node --test
+
+      - name: The example config is valid
+        env:
+          RELAY_SECRET: ci-secret-0123456789abcdefghij
+          CONFIG_PATH: config.example.json
+          DISCORD_WEBHOOK_DEPLOYMENTS: https://discord.com/api/webhooks/123456789012345678/example
+          DISCORD_WEBHOOK_TEAM: https://discord.com/api/webhooks/123456789012345678/example
+        run: node src/index.js check
+
+      - name: package.json version matches the latest changelog entry
+        run: |
+          pkg=$(node -p "require('./package.json').version")
+          changelog=$(grep -m1 -oP '^## \[\K[0-9][^]]*' CHANGELOG.md)
+          echo "package.json: $pkg  CHANGELOG.md: $changelog"
+          [ "$pkg" = "$changelog" ]
+
+  docker:
+    name: Docker image builds and starts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: docker build -t monday-to-discord .
+      - name: Start and check health
+        run: |
+          docker run -d --name m2d -p 3000:3000 \
+            -e RELAY_SECRET=ci-secret-0123456789abcdefghij \
+            -e RULES_JSON='{"rules":[{"events":["item_moved"],"webhook":"https://discord.com/api/webhooks/123456789012345678/example"}]}' \
+            monday-to-discord
+          for i in $(seq 1 20); do curl -fs localhost:3000/health && exit 0; sleep 1; done
+          docker logs m2d
+          exit 1

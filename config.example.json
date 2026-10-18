@@ -1,0 +1,37 @@
+{
+  "rules": [
+    {
+      "name": "Ready for deployment",
+      "events": ["item_moved"],
+      "boards": ["Development"],
+      "groups": ["Ready for deployment"],
+      "webhook": "env:DISCORD_WEBHOOK_DEPLOYMENTS",
+      "title": "{item} is ready for deployment",
+      "description": "Moved from {from} by {user}.",
+      "colour": "#4C3BFF",
+      "mentionRole": "123456789012345678",
+      "username": "{board}"
+    },
+    {
+      "name": "Stuck items",
+      "events": ["status_changed"],
+      "columns": ["Status"],
+      "statuses": ["Stuck"],
+      "webhook": "env:DISCORD_WEBHOOK_TEAM",
+      "colour": "#E2445C"
+    },
+    {
+      "name": "New requests",
+      "events": ["item_created"],
+      "boards": ["Requests"],
+      "webhook": "env:DISCORD_WEBHOOK_TEAM"
+    },
+    {
+      "name": "Comments",
+      "events": ["update_posted"],
+      "boards": ["Development"],
+      "webhook": "env:DISCORD_WEBHOOK_TEAM",
+      "showLink": true
+    }
+  ]
+}

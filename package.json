@@ -1,0 +1,38 @@
+{
+  "name": "monday-to-discord",
+  "version": "1.0.0",
+  "description": "Posts monday.com board activity to Discord: items moved between groups, status changes, new items and new updates, routed by rules.",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "monday-to-discord": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "check": "node src/index.js check",
+    "test-message": "node src/index.js test",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WelshPigeon/monday-to-discord.git"
+  },
+  "homepage": "https://github.com/WelshPigeon/monday-to-discord#readme",
+  "bugs": {
+    "url": "https://github.com/WelshPigeon/monday-to-discord/issues"
+  },
+  "keywords": [
+    "monday",
+    "monday.com",
+    "discord",
+    "discord-webhook",
+    "webhook",
+    "notifications"
+  ],
+  "author": "Pigeon Studios (https://pigeonstudios.co.uk)",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "private": true
+}
