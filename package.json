@@ -18,11 +18,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WelshPigeon/monday-to-discord.git"
+    "url": "git+https://github.com/pigeon-studios-uk/monday-to-discord.git"
   },
-  "homepage": "https://github.com/WelshPigeon/monday-to-discord#readme",
+  "homepage": "https://github.com/pigeon-studios-uk/monday-to-discord#readme",
   "bugs": {
-    "url": "https://github.com/WelshPigeon/monday-to-discord/issues"
+    "url": "https://github.com/pigeon-studios-uk/monday-to-discord/issues"
   },
   "keywords": [
     "monday",

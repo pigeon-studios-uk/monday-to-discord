@@ -10,6 +10,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Changed
+
+- Links, badges and the update checker's registry address now point to the Pigeon Studios GitHub organisation, [pigeon-studios-uk](https://github.com/pigeon-studios-uk). Old WelshPigeon links still redirect, and copies already installed keep working.
+
 ## [1.0.0] - 2026-10-18
 
 First release. Monday to Discord replaces monday-discord-relay.
@@ -43,5 +47,5 @@ First release. Monday to Discord replaces monday-discord-relay.
 - The `/test-discord` route; use `npm run test-message`.
 - Dependencies on Express, axios and dotenv.
 
-[Unreleased]: https://github.com/WelshPigeon/monday-to-discord/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/WelshPigeon/monday-to-discord/releases/tag/v1.0.0
+[Unreleased]: https://github.com/pigeon-studios-uk/monday-to-discord/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/pigeon-studios-uk/monday-to-discord/releases/tag/v1.0.0

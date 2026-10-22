@@ -4,7 +4,7 @@
   <p><strong>Posts monday.com board activity to Discord: items moved between groups, status changes, new items and new updates, routed by rules.</strong></p>
 
   <p>
-    <a href="https://github.com/WelshPigeon/monday-to-discord/releases/latest"><img src="https://img.shields.io/github/v/release/WelshPigeon/monday-to-discord?label=release&color=2ea043" alt="Latest release" /></a>
+    <a href="https://github.com/pigeon-studios-uk/monday-to-discord/releases/latest"><img src="https://img.shields.io/github/v/release/pigeon-studios-uk/monday-to-discord?label=release&color=2ea043" alt="Latest release" /></a>
     <a href="LICENSE.md"><img src="https://img.shields.io/badge/licence-Pigeon%20Studios%20Free-6f42c1" alt="Licence: Pigeon Studios Free Licence" /></a>
     <img src="https://img.shields.io/badge/node-%E2%89%A520-339933?logo=node.js&logoColor=white" alt="Node.js 20 or newer" />
     <img src="https://img.shields.io/badge/dependencies-none-2ea043" alt="No dependencies" />
@@ -89,7 +89,7 @@ Titles, descriptions, colours, webhook names and pings are all set per rule.
 
 ## Getting started
 
-1. **Download** the latest release from [Releases](https://github.com/WelshPigeon/monday-to-discord/releases/latest) and extract it, or clone the repository.
+1. **Download** the latest release from [Releases](https://github.com/pigeon-studios-uk/monday-to-discord/releases/latest) and extract it, or clone the repository.
 2. **Create your settings:** copy `.env.example` to `.env` and fill it in. At minimum, set `RELAY_SECRET` to a long random value:
 
    ```bash
@@ -312,7 +312,7 @@ It keeps nothing on disk. Repeats are remembered in memory for an hour, so a res
 - **Logs** contain item names, board names and IDs, but not tokens, webhook URLs or full events (unless `DEBUG=true`).
 - **Personal data.** Messages can include people's names and what they wrote in updates, posted to your Discord. Check that's acceptable for your team and the channels you use.
 
-Please report security problems privately: use the **Report a vulnerability** button in this repository's **Security** tab, or follow our [Security Policy](https://github.com/WelshPigeon/.github/blob/main/SECURITY.md).
+Please report security problems privately: use the **Report a vulnerability** button in this repository's **Security** tab, or follow our [Security Policy](https://github.com/pigeon-studios-uk/.github/blob/main/SECURITY.md).
 
 ## Troubleshooting
 
@@ -350,13 +350,13 @@ No. It uses their public APIs.
 
 ## Support
 
-Read [Troubleshooting](#troubleshooting) first, then ask in the support channels of our [Discord](https://discord.gg/2NFVWEUmDF). See [Getting help](https://github.com/WelshPigeon/.github/blob/main/SUPPORT.md).
+Read [Troubleshooting](#troubleshooting) first, then ask in the support channels of our [Discord](https://discord.gg/2NFVWEUmDF). See [Getting help](https://github.com/pigeon-studios-uk/.github/blob/main/SUPPORT.md).
 
-Found a bug? Open a [bug report](https://github.com/WelshPigeon/monday-to-discord/issues/new/choose).
+Found a bug? Open a [bug report](https://github.com/pigeon-studios-uk/monday-to-discord/issues/new/choose).
 
 ## Contributing
 
-Fixes and improvements are welcome. Please read the [contributing guide](https://github.com/WelshPigeon/.github/blob/main/CONTRIBUTING.md) first. Run `npm test` before opening a pull request; there's nothing to install.
+Fixes and improvements are welcome. Please read the [contributing guide](https://github.com/pigeon-studios-uk/.github/blob/main/CONTRIBUTING.md) first. Run `npm test` before opening a pull request; there's nothing to install.
 
 ## Licence
 
