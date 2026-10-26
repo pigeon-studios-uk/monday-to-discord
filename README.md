@@ -1,4 +1,6 @@
 <div align="center">
+  <img src=".github/banner.png" alt="Monday to Discord" width="100%" />
+
   <h1>Monday to Discord</h1>
 
   <p><strong>Posts monday.com board activity to Discord: items moved between groups, status changes, new items and new updates, routed by rules.</strong></p>
