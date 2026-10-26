@@ -61,3 +61,4 @@ docs/INTERNAL.md  export-ignore
 test/            export-ignore
 .dockerignore    export-ignore
 .gitlab-ci.yml   export-ignore
+.gitleaks.toml   export-ignore

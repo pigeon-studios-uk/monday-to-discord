@@ -1,0 +1,9 @@
+# Gitleaks settings for the shared "secrets" check (https://gitlab.com/pigeon-studios/tools/ci-templates).
+# Uses Gitleaks' own rules, with one exception below.
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "The GitHub workflow starts the relay with a dummy secret, which looks like an API key."
+regexes = ['''^ci-secret-0123456789abcdefghij$''']
