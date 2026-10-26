@@ -60,3 +60,4 @@ docs/INTERNAL.md  export-ignore
 # Development files, not needed to run it.
 test/            export-ignore
 .dockerignore    export-ignore
+.gitlab-ci.yml   export-ignore
