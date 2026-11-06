@@ -1,6 +1,6 @@
 {
   "name": "monday-to-discord",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Posts monday.com board activity to Discord: items moved between groups, status changes, new items and new updates, routed by rules.",
   "type": "module",
   "main": "src/index.js",
